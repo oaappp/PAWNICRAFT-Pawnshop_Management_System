@@ -1,7 +1,5 @@
 # PAWNICRAFT-Pawnshop_Management_System
 
-# Pawnshop Management System (PHP/MySQL)
-
 A role-based pawnshop management system for daily operations: customers, pawn tickets (multi-item), interest calculations, renewals, redemptions, auctions (reporting), and comprehensive reports — designed for XAMPP (Apache, PHP, MySQL).
 
 - Backend: PHP 8.1+, MySQL 8.0+, Apache (via XAMPP)
