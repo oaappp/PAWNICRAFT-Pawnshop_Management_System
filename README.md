@@ -1,4 +1,4 @@
-# PAWNICRAFT-Pawnshop_Management_System
+# PAWNITRACK-Pawnshop_Management_System
 
 A role-based pawnshop management system for daily operations: customers, pawn tickets (multi-item), interest calculations, renewals, redemptions, auctions (reporting), and comprehensive reports — designed for XAMPP (Apache, PHP, MySQL).
 
