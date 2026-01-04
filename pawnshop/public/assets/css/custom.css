@@ -1,0 +1,341 @@
+:root {
+    --bg-main: #020617;      /* very dark navy */
+    --bg-sidebar: #020617;
+    --bg-sidebar-hover: #111827;
+    --bg-topbar: #020617;
+    --bg-card: #020617;
+
+    --text-light: #f9fafb;   /* almost white */
+    --text-muted: #9ca3af;
+
+    --accent: #22c55e;       /* neon green accent */
+    --accent-soft: rgba(34, 197, 94, 0.15);
+}
+
+/* Base */
+body.bg-body-dark {
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* General text color in main area (NO !important so sidebar can override) */
+body,
+.app-shell,
+.app-main,
+.app-content,
+.card,
+.table {
+    color: var(--text-light);
+}
+
+/* Muted text */
+.text-muted,
+.small.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Layout */
+.app-shell {
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.app-sidebar {
+    width: 230px;
+    flex: 0 0 230px;              /* fixed width in flex layout */
+    background-color: var(--bg-sidebar);
+    color: var(--text-light);
+    padding: 1rem;
+    border-right: 1px solid #111827;
+}
+
+.sidebar-header .brand-icon .brand-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    display: inline-block;
+}
+
+.sidebar-header .brand-text {
+    font-size: 0.9rem;
+}
+
+/* Sidebar nav links */
+.sidebar-nav .nav-link {
+    color: var(--text-muted);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 0.1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.sidebar-nav .nav-link i {
+    font-size: 1.1rem;
+}
+
+.sidebar-nav .nav-link:hover {
+    background-color: var(--bg-sidebar-hover);
+    color: var(--text-light);
+}
+
+.sidebar-nav .nav-link.active {
+    background-color: var(--accent-soft);
+    color: var(--accent);
+}
+
+.sidebar-nav .nav-link.active i {
+    color: var(--accent);
+}
+
+.sidebar-section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.07em;
+}
+
+.sidebar-footer a {
+    text-decoration: none;
+}
+
+/* MAIN AREA */
+.app-main {
+    background-color: var(--bg-main);
+}
+
+/* TOPBAR */
+.app-topbar {
+    background-color: var(--bg-topbar);
+    border-bottom: 1px solid #111827;
+    padding: 0.6rem 1.5rem;
+}
+
+/* Avatar & notification */
+.avatar-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background-color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+/* CONTENT */
+.app-content {
+    background-color: #020617;
+}
+
+/* CARDS */
+.card {
+    background-color: var(--bg-card);
+    border-radius: 0.8rem;
+    border: 1px solid #111827;
+}
+
+.card-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid #111827;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+/* optional darker background helper */
+.bg-dark-2 {
+    background-color: #020617 !important;
+}
+
+/* TABLES (dark theme overrides) */
+.table {
+    background-color: #020617;
+    color: var(--text-light);
+    border-color: #111827;
+}
+
+/* Header cells */
+.table thead th {
+    background-color: #020617;
+    border-bottom: 1px solid #111827;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Body rows & cells */
+.table tbody tr,
+.table tbody tr td {
+    background-color: #020617;
+    color: var(--text-light);
+    border-color: #111827;
+}
+
+/* Striping from Bootstrap/DataTables */
+.table-striped > tbody > tr:nth-of-type(odd),
+.table-striped > tbody > tr:nth-of-type(even),
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.stripe tbody tr.even,
+table.dataTable.display tbody tr.odd,
+table.dataTable.display tbody tr.even {
+    background-color: #020617;
+}
+
+/* Hover state */
+.table-hover tbody tr:hover,
+table.dataTable.hover tbody tr:hover {
+    background-color: #030712;
+    color: var(--text-light);
+}
+
+/* FORMS */
+.form-control,
+.form-select {
+    background-color: #020617;
+    border: 1px solid #111827;
+    color: var(--text-light) !important;   /* ensure inside text is white */
+}
+
+/* dropdown items in selects */
+.form-select option {
+    background-color: #020617;
+    color: var(--text-light);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent-soft);
+    background-color: #020617;
+    color: var(--text-light) !important;
+}
+
+.form-control::placeholder {
+    color: #6b7280;
+}
+
+.form-label {
+    color: var(--text-muted);
+}
+
+/* FILE INPUT (remove white background) */
+input[type="file"].form-control,
+.form-control[type="file"] {
+    background-color: #020617;
+    color: var(--text-light);
+    border: 1px solid #111827;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #020617;
+    color: var(--text-light);
+    border: 1px solid #4b5563;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+input[type="file"]::file-selector-button:hover {
+    background-color: #111827;
+}
+
+/* For older WebKit browsers */
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #020617;
+    color: var(--text-light);
+    border: 1px solid #4b5563;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #111827;
+}
+
+/* BUTTONS */
+.btn-teal {
+    background-color: var(--accent);
+    color: #020617;
+    border: none;
+}
+.btn-teal:hover {
+    background-color: #16a34a;
+    color: #020617;
+}
+
+/* Dark secondary button used in Quick Actions ("New Redemption", "New Renewal") */
+.btn-dark-2 {
+    background-color: #111827;
+    color: var(--text-light);
+    border: 1px solid #1f2937;
+    font-weight: 600;     /* bold text */
+}
+.btn-dark-2:hover {
+    background-color: #1f2937;
+    color: var(--text-light);
+}
+
+.btn-outline-secondary {
+    border-color: #4b5563;
+    color: var(--text-light);
+}
+.btn-outline-secondary:hover {
+    background-color: #4b5563;
+    color: var(--text-light);
+}
+
+/* ALERTS */
+.alert {
+    border-radius: 0.5rem;
+    border: 1px solid #374151;
+}
+.alert-danger {
+    background-color: rgba(239, 68, 68, 0.12);
+    color: #fecaca;
+}
+.alert-success {
+    background-color: rgba(34, 197, 94, 0.12);
+    color: #bbf7d0;
+}
+
+/* DATATABLES DARK */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: var(--text-light) !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: var(--accent-soft) !important;
+    color: var(--accent) !important;
+}
+.dataTables_wrapper .dataTables_filter input {
+    background-color: #020617;
+    border: 1px solid #111827;
+    color: var(--text-light);
+}
+
+/* DASHBOARD: bold white text for better readability */
+.dashboard-page {
+    font-weight: 600;
+}
+.dashboard-page h3,
+.dashboard-page h4,
+.dashboard-page h5,
+.dashboard-page h6 {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+.dashboard-page .card-header {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+.dashboard-page .small,
+.dashboard-page .text-muted,
+.dashboard-page .card-body .small.text-muted {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
